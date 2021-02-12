@@ -3,6 +3,10 @@
   padding: 0px;
 }
 
+body {
+  overflow-X: hidden;
+}
+
 .container {
   width: 100vw;
   height: 100vh;
@@ -262,5 +266,95 @@ button:hover img {
   width: 12px;
   margin: 0 4px;
   height: 20px;
+}
+
+.flip {
+  width: 100vw;
+  height: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.flip .box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.flip .box-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2980b9;
+}
+
+.flip .box-back img {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+  height: 50%;
+}
+
+.flip .box-front {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.flip .box-front img {
+  width: 100%;
+  height: 100%;
+}
+
+.text {
+  padding: 30px 30px;
+}
+
+.text h1 {
+  color: white;
+  font-size: 30px;
+}
+
+.text p {
+  margin-top: 10px;
+  color: white;
+}
+
+.text b {
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.text .fas {
+  color: white;
+}
+
+.flip-inner {
+  width: 28%;
+  height: 450px;
+  margin: 20px auto;
+}
+
+.flip-inner:hover .box {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.box-back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
 }
 /*# sourceMappingURL=index.css.map */
