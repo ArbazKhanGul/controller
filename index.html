@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <img src="/Playstation_Img/logo.png" alt="" id="logo">
+            <ul id="list">
+                <li>Game Controllers</li>
+                <li>VIP Accessories</li>
+                <li>Media Procedure</li>
+                <li>Others</li>
+            </ul>
+            <img src="/Playstation_Img/menu.png" alt="" id="menu">
+        </nav>
+
+        <div class="row">
+            <div class="col1">
+                <h1>PS4 V2</h1>
+                <h2>Dualshock 4</h2>
+                <p>Wireless Controllers for Playstation 4</p>
+                <b>$32.50</b>
+                <br>
+                <button>Buy Now <img src="/Playstation_Img/arrow.png" alt=""></button>
+            </div>
+            <div class="col2">
+             <img src="/Playstation_Img/controller.png" alt="">
+              <div class="color"></div> 
+              <div class="cart">
+                  <img src="/Playstation_Img/add.png" id="add" alt="">
+            <p>Add to cart</p>
+            </div>
+            </div>
+        </div>
+        <div class="icons">
+<img src="/Playstation_Img/fb.png" alt="">
+<img src="/Playstation_Img/ig.png" alt="">
+<img src="/Playstation_Img/tw.png" alt="">
+</div>
+    </div>
+    <script>
+var a=document.getElementById("menu");
+var b=document.getElementById("list");
+console.log(b);
+
+b.style.height="0px";
+a.onclick=toggle;
+function toggle()
+{
+if(b.style.height=="0px")
+{
+    b.style.height="120px"
+}
+else{
+    b.style.height="0px";
+}
+
+}
+    </script>
+</body>
+</html>
