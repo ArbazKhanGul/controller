@@ -255,19 +255,6 @@ button:hover img {
   display: block;
 }
 
-.icons {
-  position: absolute;
-  bottom: 20px;
-  width: 100%;
-  text-align: center;
-}
-
-.icons img {
-  width: 12px;
-  margin: 0 4px;
-  height: 20px;
-}
-
 .flip {
   width: 100vw;
   height: 80vh;
@@ -351,10 +338,109 @@ button:hover img {
           transform-style: preserve-3d;
 }
 
+@media screen and (max-width: 770px) {
+  .flip-inner {
+    width: 90%;
+  }
+  .flip {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.inside {
+  width: 100vw;
+  height: 80vh;
+}
+
 .box-back {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
+}
+
+.head {
+  position: relative;
+  width: 100%;
+  height: 60px;
+}
+
+.head h1 {
+  color: #e74c3c;
+  text-shadow: 0px 0px 2px black;
+  text-shadow: 0px 0px 4px black;
+  text-shadow: 0px 0px 5px black;
+  text-shadow: 0px 0px 10px #3498db;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  -webkit-animation: move 10s linear infinite;
+          animation: move 10s linear infinite;
+  white-space: nowrap;
+  -webkit-transition: all 10s;
+  transition: all 10s;
+}
+
+@-webkit-keyframes move {
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes move {
+  100% {
+    left: 100%;
+  }
+}
+
+#but {
+  width: 46%;
+  height: 44px;
+  display: inline-block;
+  margin-top: 10px;
+  outline: none;
+  border: none;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e84393), to(#e74c3c));
+  background: linear-gradient(#e84393, #e74c3c);
+  padding: 10px 20px;
+  white-space: nowrap;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+}
+
+#but:hover {
+  background: white;
+  color: black;
+}
+
+.icons {
+  position: fixed;
+  top: 50%;
+  left: 0px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0 3px 0 5px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.icons #fb, .icons #tw, .icons #ins {
+  display: block;
+  margin: 10px 0px;
+}
+
+.icons #fb {
+  color: #3498db;
+}
+
+.icons #tw {
+  color: #3498db;
+}
+
+.icons #ins {
+  color: #e74c3c;
 }
 /*# sourceMappingURL=index.css.map */
